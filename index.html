@@ -8,22 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;700&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <img
-        src="logo.png"
-        alt="Today I Learned Logo"
-        height="68px"
-        width="68px"
-      />
-      <h1>Today I Learned</h1>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="logo.png"
+          alt="Today I Learned Logo"
+          height="68px"
+          width="68px"
+        />
+        <h1>Today I Learned</h1>
+      </div>
+
       <button>Share a Fact</button>
     </header>
-    <form action="">
+    <form class="fact-form">
       <input type="text" placeholder="Share a fact with the world..." />
       <span>200</span>
       <input type="text" placeholder="Trustworthy source..." />
@@ -35,7 +38,7 @@
       </select>
       <button>Post</button>
     </form>
-    <main>
+    <main class="main">
       <aside>
         <ul>
           <li><button>All</button></li>
@@ -45,19 +48,27 @@
       </aside>
       <section>
         <ul>
-          <li>
+          <li class="fact">
             <p>
               React is being developed by Meta (formerly facebook)
               <a href="https://opensource.fb.com/" target="_blank">(Source)</a>
-              <span>#technology#</span>
             </p>
-            <div>
+            <span
+              class="tag"
+              style="
+                background-color: #1d4ed8;
+                padding: 5px 10px;
+                border-radius: 20px;
+              "
+              >#technology#</span
+            >
+            <div class="vote-buttons">
               <button>👍 <strong>24</strong></button>
               <button>🤯 <strong>9</strong></button>
               <button>⛔ <strong>4</strong></button>
             </div>
           </li>
-          <li>
+          <li class="fact">
             <p>
               Millennial dads spend 3 times as much time with their kids than
               their fathers spent with them. In 1982, 43% of fathers had never
@@ -67,9 +78,17 @@
                 target="_blank"
                 >(Source)</a
               >
-              <span>#society#</span>
             </p>
-            <div>
+            <span
+              class="tag"
+              style="
+                background-color: #a16207;
+                padding: 5px 10px;
+                border-radius: 20px;
+              "
+              >#society#</span
+            >
+            <div class="vote-buttons">
               <button>👍 <strong>15</strong></button>
               <button>🤯 <strong>8</strong></button>
               <button>⛔ <strong>2</strong></button>
