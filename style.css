@@ -15,7 +15,7 @@ body {
   background-color: #171717;
   color: #fafafa;
   font-family: "Geologica", sans-serif;
-  padding: 40px;
+  padding: 48px 64px;
 }
 
 h1 {
@@ -36,7 +36,7 @@ p {
 }
 .header {
   margin-bottom: 48px;
-  padding: 16px;
+  padding: 16px 0px;
 
   display: flex;
   justify-content: space-between;
@@ -54,6 +54,7 @@ p {
   margin-bottom: 48px;
   padding: 16px 40px;
   text-align: center;
+  border-radius: 16px;
 }
 
 .fact {
@@ -65,19 +66,103 @@ p {
   display: flex;
   align-items: center;
   gap: 24px;
+  border-radius: 16px;
 }
 
 .vote-buttons {
   margin-left: auto;
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: #404040;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vote-buttons button:hover {
+  background-color: #171717;
 }
 
 .tag {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
+  border-radius: 100px;
 }
 
 .main {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: auto 1fr;
+  gap: 64px;
+}
+
+.main-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.source {
+  margin-left: 12px;
+}
+
+.source:link,
+.source:visited {
+  color: #a3a3a3;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.source:hover,
+.source:active {
+  color: #be185d;
+}
+
+.btn {
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  color: inherit;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 16px 24px;
+  background-image: linear-gradient(135deg, #e11d48, #be185d, #9333ea);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-large {
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+.btn-all-categories {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  min-width: 100%;
+}
+
+.btn-category {
+  min-width: 100%;
+  background-image: none;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.btn-category:hover {
+  transform: scale(105%);
+}
+.btn-category:active {
+  transform: scale(100%);
+}
+
+aside ul li {
+  margin-bottom: 14px;
 }
