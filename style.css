@@ -174,12 +174,26 @@ p {
 .btn-large {
   font-size: 20px;
   border-radius: 16px;
+  transition: 0.2s;
+}
+.btn-large:hover {
+  transform: scale(103%);
+}
+.btn-large:active {
+  transform: scale(98%);
 }
 
 .btn-all-categories {
   margin-bottom: 20px;
   border-radius: 16px;
   min-width: 100%;
+  transition: 0.2s;
+}
+.btn-all-categories:hover {
+  transform: scale(105%);
+}
+.btn-all-categories:active {
+  transform: scale(100%);
 }
 
 .btn-category {
