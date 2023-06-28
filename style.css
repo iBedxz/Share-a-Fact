@@ -52,9 +52,33 @@ p {
 .fact-form {
   background-color: #262626;
   margin-bottom: 48px;
-  padding: 16px 40px;
+  padding: 16px 32px;
   text-align: center;
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.fact-form input,
+.fact-form select {
+  color: inherit;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 14px;
+  background-color: #404040;
+  border: none;
+  border-radius: 100px;
+  padding: 6px 12px;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  margin: 0px 10px;
+  font-size: 18px;
 }
 
 .fact {
@@ -62,11 +86,21 @@ p {
   line-height: 1.5;
   background-color: #262626;
   margin-bottom: 24px;
-  padding: 16px 24px;
+  padding: 24px;
   display: flex;
   align-items: center;
   gap: 24px;
   border-radius: 16px;
+}
+
+@media (max-width: 1100px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .fact p {
+    align-self: flex-start;
+  }
 }
 
 .vote-buttons {
@@ -104,7 +138,6 @@ p {
   grid-template-columns: auto 1fr;
   gap: 64px;
 }
-
 .main-container {
   max-width: 1300px;
   margin: 0 auto;
@@ -140,19 +173,19 @@ p {
 
 .btn-large {
   font-size: 20px;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 .btn-all-categories {
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: 16px;
   min-width: 100%;
 }
 
 .btn-category {
   min-width: 100%;
   background-image: none;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: 0.2s;
 }
 
@@ -165,4 +198,30 @@ p {
 
 aside ul li {
   margin-bottom: 14px;
+}
+
+@media (max-width: 800px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+  aside ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  aside {
+    margin-bottom: 12px;
+  }
+  aside ul li {
+    margin: 0px;
+  }
+  .btn-all-categories {
+    margin-bottom: 0px;
+  }
 }
