@@ -36,6 +36,7 @@ btn.addEventListener("click", function () {
   }
 });
 
+// Colors and Categories Colors
 const CATEGORIES = [
   { name: "technology", color: "#3b82f6" },
   { name: "science", color: "#16a34a" },
@@ -81,6 +82,7 @@ const initialFacts = [
   },
 ];
 
+// Function that takes the Data from Supabase and formats to HTML
 const createArrHtml = (dataArr) => {
   const htmlArr = dataArr.map(
     (fact) => `<li class="fact">
