@@ -1,0 +1,274 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #171717;
+  color: #fafafa;
+  font-family: "Geologica", sans-serif;
+  padding: 48px 64px 0px;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: capitalize;
+}
+
+ul {
+  list-style: none;
+}
+
+aside {
+  margin-bottom: 48px;
+}
+
+p {
+  font-family: "Roboto Mono", sans-serif;
+}
+.header {
+  margin-bottom: 48px;
+  padding: 16px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fact-form {
+  background-color: #262626;
+  margin-bottom: 48px;
+  padding: 16px 32px;
+  text-align: center;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.fact-form input,
+.fact-form select {
+  color: inherit;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 14px;
+  background-color: #404040;
+  border: none;
+  border-radius: 100px;
+  padding: 6px 12px;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  margin: 0px 10px;
+  font-size: 18px;
+}
+
+.fact {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #262626;
+  margin-bottom: 24px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+}
+
+@media (max-width: 1100px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .fact p {
+    align-self: flex-start;
+  }
+}
+
+.vote-buttons {
+  margin-left: auto;
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: #404040;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vote-buttons button:hover {
+  background-color: #171717;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 100px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 64px;
+  height: calc(100vh - 48px - 100px - 48px);
+}
+section {
+  overflow: hidden scroll; /* Hide scrollbars */
+  padding-bottom: 32px;
+}
+section::-webkit-scrollbar {
+  display: none;
+}
+#root {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.source {
+  margin-left: 12px;
+}
+
+.source:link,
+.source:visited {
+  color: #a3a3a3;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.source:hover,
+.source:active {
+  color: #be185d;
+}
+
+.btn {
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  color: inherit;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 16px 24px;
+  background-image: linear-gradient(135deg, #e11d48, #be185d, #9333ea);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-large {
+  font-size: 20px;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+.btn-large:hover {
+  transform: scale(103%);
+}
+.btn-large:active {
+  transform: scale(98%);
+}
+
+.btn-all-categories {
+  margin-bottom: 20px;
+  border-radius: 16px;
+  min-width: 100%;
+  transition: 0.2s;
+}
+.btn-all-categories:hover {
+  transform: scale(105%);
+}
+.btn-all-categories:active {
+  transform: scale(100%);
+}
+
+.btn-category {
+  min-width: 100%;
+  background-image: none;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.btn-category:hover {
+  transform: scale(105%);
+}
+.btn-category:active {
+  transform: scale(100%);
+}
+
+aside ul li {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 24px 36px 0px;
+  }
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+    justify-content: center;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+  .fact {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .tag {
+    font-size: 10px;
+  }
+  .vote-buttons button {
+    font-size: 12px;
+  }
+  aside ul {
+    display: grid;
+    justify-content: center;
+  }
+  img {
+    height: 52px;
+    width: 52px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .btn-large {
+    font-size: 16px;
+  }
+}
+
+.hidden {
+  display: none;
+}
